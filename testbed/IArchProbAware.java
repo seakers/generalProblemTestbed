@@ -5,18 +5,13 @@
  */
 
 package testbed;
-
+import java.util.*;
 /**
  *
  * @author nkner_000
  */
-public class Testbed {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public interface IArchProbAware extends IArch{
+    public IValFunc getSolves();
+    public Set<ICapable> getCapabilities();
+    public Set<IPerf> getPerfAttr();
 }

@@ -5,8 +5,8 @@
  */
 
 package testbedInternals;
-import java.util.ArrayList;
-import testbed.IFunctor;
+import java.util.*;
+import java.util.function.*;
 import testbed.ITree;
 
 /**
@@ -14,22 +14,27 @@ import testbed.ITree;
  * @author nkner_000
  */
 public abstract class absTree implements ITree{
-    ArrayList<ITree> children;
-    
-    @Override
-    public ArrayList<ITree> getChildren(){
-        return children;
+    List<ITree> children;
+
+    public absTree(List<ITree> children) {
+        this.children = children;
+    }
+    public absTree() {
+        this.children=new ArrayList<>(0); //create empty to avoid null pointers.
     }
     
     @Override
-    public Object treeExec(IFunctor onEach, IFunctor aggFunc){ // execectues the functor on every element in the tree
-        Object holdover=onEach.eval(this);
+    public ITree[] getChildren(){
+        return (ITree[]) children.toArray();
+    }
+    
+    @Override
+    public Object treeExec(Function onEach, BiFunction aggFunc){ // execectues the functor on every element in the tree
+        Object holdover=onEach.apply(this);
         
-        //ASSERT: For each will no execute if no children.
-        for(ITree node: children){ //left-side traversal.
-            Object[] grp={holdover,node.treeExec(onEach,aggFunc)};
-            holdover=aggFunc.eval(grp);
-        }
+        //ASSERT: Foreach loop will not execute if no children.
+        for(ITree node: children) //left-side traversal.
+            holdover=aggFunc.apply(holdover, node.treeExec(onEach,aggFunc));
         return holdover;
     }
     
@@ -38,24 +43,17 @@ public abstract class absTree implements ITree{
      * Implemented instead of toString to force clients to 
      * @return A string concatenating all the toStrings.
      */
-    public String meAndKidString(){
+    public String thisAndChildStr(){
         return (String) this.treeExec(new strExec(), new strConcat());
     }
-        protected static class strExec implements IFunctor{
-            public Object eval(Object o){
-                return strEval((absTree) o);
-            }
-
-            public static String strEval(absTree a){
+        protected static class strExec implements Function<absTree, String>{
+            public String apply(absTree a){
                 return a.toString();
             }
         }
-        protected static class strConcat implements IFunctor{
-            public Object eval(Object o){
-                return concat((String[]) o);
-            }
-            private static String concat(String[] strs){
-                return strs[1]+strs[2];
+        protected static class strConcat implements BiFunction<String, String, String>{
+            public String apply(String s1, String s2){
+                return s1+s2;
             }
         }
 }

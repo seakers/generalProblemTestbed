@@ -8,7 +8,7 @@ package testbedInternals;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.TreeSet;
-import testbed.IFunctor;
+import testbed.Function;
 import testbed.IGoal;
 import testbed.ITree;
 import testbed.ISatisfy;
@@ -33,5 +33,23 @@ public class caseReq extends requirement{
         
     }
     
-    private double satLvlSingle()
+    private double satLvlSingle(){
+    }
+            
+    /**
+     * 
+     * @return the domain [0,1] with a discrete set of values. 0 is FALSE, 1 is TRUE.
+     */
+    @Override
+    public TreeSet<Interval> domain() {
+        Interval res=new Interval(0,1);
+        TreeSet<Interval> tmp=new TreeSet<>();
+        tmp.add(res);
+        return tmp;
+    }
+
+    @Override
+    public RealOptima utility(double satLvl) {
+        return new RealOptima(1);
+    }
 }

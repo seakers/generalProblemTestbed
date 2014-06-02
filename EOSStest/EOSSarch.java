@@ -7,23 +7,20 @@
 package EOSStest;
 import testbed.IArch;
 import java.util.*;
-import testbed.IElement;
+import testbedInternals.absTree;
 
 /**
  *
  * @author nkner_000
  */
-public class EOSSarch implements IArch{
-    ArrayList<Orbit> orbs;
-    
+public class EOSSarch extends absTree implements IArch{
     public EOSSarch(String s){
-        orbs=new ArrayList<>(4);
-        for(int i=0; i<orbs.size(); i++)
-            orbs.add(new Orbit(s.substring(i*7,(i+1)*7)));
+        super(Arrays.asList(parseStr(s)));
     }
-    
-    @Override
-    public TreeSet<IElement> getComponents(){
-        return new TreeSet<>(orbs);
+    public static Orbit[] parseStr(String s){
+        Orbit[] orbs=new Orbit[4];
+        for(int i=0; i<orbs.length; i++)
+            orbs[i]=new Orbit(s.substring(i*7,(i+1)*7));
+        return orbs;
     }
 }

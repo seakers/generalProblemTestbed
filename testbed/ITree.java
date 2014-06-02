@@ -5,14 +5,13 @@
  */
 
 package testbed;
-import java.util.ArrayList;
-
+import java.util.function.*;
 /**
  *
  * @author nkner_000
  */
 public interface ITree {
-    public ArrayList<ITree> getChildren();
+    public ITree[] getChildren();
     
     /**
      * 
@@ -23,5 +22,5 @@ public interface ITree {
      * @param Params: Constant parameters.
      * @return The result of all the aggregations.
      */
-    public Object treeExec(IFunctor onEach, IFunctor aggregate);
+    public Object treeExec(Function onEach, BiFunction aggregate);
 }

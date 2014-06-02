@@ -11,6 +11,5 @@ import java.util.TreeSet;
  *
  * @author nkner_000
  */
-public interface IArch {
-    public Tree<IElement> getComponents();
+public interface IArch extends IElement{
 }

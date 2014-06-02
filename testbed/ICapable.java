@@ -13,5 +13,5 @@ import testbed.IArch;
  * @author nkner_000
  */
 public interface ICapable {
-    public boolean chkCapable(IArch a);
+    public IPerf getPerfAttr();
 }
