@@ -11,4 +11,5 @@ import java.util.*;
  */
 public interface IGoal extends ITree{
     public boolean isSatisfy(Collection<ICapable> c);
+    public Function<ISatisfy> aggregation(ISatisfy )
 }

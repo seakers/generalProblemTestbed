@@ -5,14 +5,8 @@
  */
 
 package testbedInternals;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.TreeSet;
-import testbed.Function;
-import testbed.IGoal;
-import testbed.ITree;
-import testbed.ISatisfy;
-import testbed.ICapable;
+import java.util.*;
+import testbed.*;
 
 /**
  *
@@ -22,20 +16,29 @@ public class caseReq extends requirement{
     double[] mins;
     double[] maxes;
     double[] satLvls;
-    
-    @Override
-    public double satLvl() {
-        
-    }
-    
+      
+/** IGoal Overrides **/
     @Override
     public boolean isSatisfy(Collection<ICapable> c) {
         
     }
     
     private double satLvlSingle(){
+        
     }
-            
+
+/** ISatisfy Overrides **/
+    
+    /**
+     * finds the satisfaction level of the requirement.
+     * @param t: a collection of performance attributes.
+     * @return a double indicating the satisfaction level
+     */
+    @Override
+    public Double apply(Collection<IPerf> t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     /**
      * 
      * @return the domain [0,1] with a discrete set of values. 0 is FALSE, 1 is TRUE.

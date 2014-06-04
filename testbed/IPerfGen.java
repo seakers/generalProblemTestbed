@@ -5,11 +5,12 @@
  */
 
 package testbed;
-import java.util.*;
+import java.util.function.*;
+
 /**
  *
  * @author nkner_000
  */
-public interface IArchProbAware extends IArch{
-    public IValFunc getSolves();
+public interface IPerfGen extends Function<ICapable, Double>{
+    //apply(IElement
 }

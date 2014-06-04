@@ -28,6 +28,13 @@ public abstract class requirement implements ISatisfy, IGoal{
         return new ITree[0];
     }
     
+    /**
+     * applies the function onEach to this requirement.
+     * This is a LEAF so there is no use of the aggregate function.
+     * @param onEach
+     * @param aggregate
+     * @return 
+     */
     @Override
     public Object treeExec(Function onEach, BiFunction aggregate){
         return onEach.apply(this);

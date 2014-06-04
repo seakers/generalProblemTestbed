@@ -1,5 +1,6 @@
 /*
  * A Function that takes an architecture ans scores it.
+ * Defines the optimization problem
  */
 
 package testbed;
