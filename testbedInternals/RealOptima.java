@@ -11,8 +11,8 @@ package testbedInternals;
  * @author nkner_000
  */
 public class RealOptima {
-    double loc;
-    double val;
+    public double loc;
+    public double val;
 
     public RealOptima(double loc, double val) {
         this.loc = loc;

@@ -4,12 +4,14 @@
 
 package testbed;
 import java.util.*;
+import java.util.function.*;
 
 /**
  *
  * @author nkner_000
  */
 public interface IGoal extends ITree{
-    public boolean isSatisfy(Collection<ICapable> c);
-    public Function<ISatisfy> aggregation(ISatisfy )
+    public ISatisfy isSatisfy(Collection<ICapable> c);
+    public BiFunction<IGoal,IGoal,ISatisfy> aggregation(IGoal a, IGoal b);
+    public String getName();
 }

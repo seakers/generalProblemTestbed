@@ -7,11 +7,13 @@
 
 package testbed;
 import testbed.IArch;
+import java.util.*;
 
 /**
  *
  * @author nkner_000
  */
 public interface ICapable {
-    public IPerf getPerfAttr();
+    public Collection<IPerf> getPerfAttr();
+    public String getName();
 }

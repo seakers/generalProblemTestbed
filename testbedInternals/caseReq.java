@@ -6,53 +6,28 @@
 
 package testbedInternals;
 import java.util.*;
+import java.util.function.BiFunction;
 import testbed.*;
 
 /**
  *
  * @author nkner_000
  */
-public class caseReq extends requirement{
-    double[] mins;
-    double[] maxes;
-    double[] satLvls;
-      
-/** IGoal Overrides **/
+public class caseReq extends multiAttrReq{
+
     @Override
-    public boolean isSatisfy(Collection<ICapable> c) {
-        
-    }
-    
-    private double satLvlSingle(){
-        
+    protected ISatisfy satLvlMulti(Collection<IPerf> c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-/** ISatisfy Overrides **/
-    
-    /**
-     * finds the satisfaction level of the requirement.
-     * @param t: a collection of performance attributes.
-     * @return a double indicating the satisfaction level
-     */
     @Override
-    public Double apply(Collection<IPerf> t) {
+    public BiFunction<IGoal, IGoal, ISatisfy> aggregation(IGoal a, IGoal b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    /**
-     * 
-     * @return the domain [0,1] with a discrete set of values. 0 is FALSE, 1 is TRUE.
-     */
-    @Override
-    public TreeSet<Interval> domain() {
-        Interval res=new Interval(0,1);
-        TreeSet<Interval> tmp=new TreeSet<>();
-        tmp.add(res);
-        return tmp;
-    }
-
-    @Override
-    public RealOptima utility(double satLvl) {
-        return new RealOptima(1);
-    }
 }

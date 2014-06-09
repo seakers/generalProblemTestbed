@@ -10,6 +10,5 @@ package testbed;
  *
  * @author nkner_000
  */
-public interface IPerf {
-    
+public interface IPerf extends Comparable{
 }

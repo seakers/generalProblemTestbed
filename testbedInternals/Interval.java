@@ -9,14 +9,16 @@ import java.util.*;
  *
  * @author nkner_000
  */
-public class Interval implements Collection {
-    public double minLim;
-    public double maxLim;
-
+public class Interval implements Collection { //really should be set, but I'm lazy.
+    private double minLim;
+    private double maxLim;
+    
     public Interval(double left, double right) {
         this.minLim = left;
         this.maxLim = right;
     }
+
+
     
     public boolean contains(double d){
         return minLim<=d && maxLim>=d;
