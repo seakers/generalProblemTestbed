@@ -2,7 +2,7 @@
  * A marker for having a capability. Should not be compared to self or any other capability.
  */
 
-package testbedInternals;
+package testbed.basicImplement;
 import testbed.*;
 
 /**

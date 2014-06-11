@@ -5,7 +5,7 @@
 package EOSStest;
 import java.util.*;
 import testbed.IElement;
-import testbedInternals.absTree;
+import testbed.abstractClass.absTree;
 
 /**
  *

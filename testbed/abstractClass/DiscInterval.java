@@ -2,7 +2,7 @@
  * A discrete interval. The basic behaviors (bound, etc) follow from the encapsulating real interval.
  */
 
-package testbedInternals;
+package testbed.abstractClass;
 
 import java.util.Arrays;
 import java.util.*;

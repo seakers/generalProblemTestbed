@@ -7,8 +7,8 @@
 package testbed;
 
 import java.util.TreeSet;
-import testbedInternals.Interval;
-import testbedInternals.RealOptima;
+import testbed.abstractClass.Interval;
+import testbed.abstractClass.RealOptima;
 
 /**
  * A basic satisfaction space and utility on the real line between 0 and 1

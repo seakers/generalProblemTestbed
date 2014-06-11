@@ -7,8 +7,8 @@
 package testbed;
 
 import java.util.*;
-import testbedInternals.Interval;
-import testbedInternals.RealOptima;
+import testbed.abstractClass.Interval;
+import testbed.abstractClass.RealOptima;
 
 /**
  * A simple satisfaction space where the 

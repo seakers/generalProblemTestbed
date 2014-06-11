@@ -3,7 +3,7 @@
  * implements collection as a result but due to the nature of the reals, it's not as simple as a list.
  */
 
-package testbedInternals;
+package testbed.abstractClass;
 
 import java.util.Arrays;
 import java.util.Collection;

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package testbedInternals;
+package testbed.basicImplement;
 import java.util.*;
 import testbed.*;
 

@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package testbedInternals;
+package testbed.basicImplement;
+import testbed.basicImplement.BooleanSatisfy;
 import java.util.Collection;
 import java.util.TreeSet;
-import java.util.function.BiFunction;
-import java.util.function.Function;
 import testbed.*;
-import testbedInternals.*;
+import testbed.abstractClass.Interval;
+import testbed.abstractClass.requirement;
 
 /**
  *

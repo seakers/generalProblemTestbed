@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 
-package testbedInternals;
+package testbed.basicImplement;
 import java.util.TreeSet;
 import testbed.*;
+import testbed.abstractClass.DiscInterval;
+import testbed.abstractClass.Interval;
 /**
  *
  * @author nkner_000

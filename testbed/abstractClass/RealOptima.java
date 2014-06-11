@@ -4,7 +4,7 @@
  * use val=Double.Inf will create a best possible optima. Usually can ignore actual value.
  */
 
-package testbedInternals;
+package testbed.abstractClass;
 
 /**
  *

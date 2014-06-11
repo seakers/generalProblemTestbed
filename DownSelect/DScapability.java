@@ -5,9 +5,9 @@
  */
 
 package DownSelect;
+import testbed.basicImplement.HasCapPerfAtt;
 import java.util.*;
 import testbed.*;
-import testbedInternals.*;
 
 /**
  * WARNING. USES A SINGLE HasCapPerfAtt PERFORMANCE ATTRIBUTE--MODIFY TO GENERALIZE

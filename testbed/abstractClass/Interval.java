@@ -2,7 +2,7 @@
  *A real interval. Use minLim>maxLim  to indicate an empty interval.
  */
 
-package testbedInternals;
+package testbed.abstractClass;
 import java.util.*;
 
 /**

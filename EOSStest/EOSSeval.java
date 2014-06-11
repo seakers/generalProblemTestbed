@@ -4,7 +4,7 @@
 
 package EOSStest;
 import testbed.IArch;
-import testbedInternals.HeirarchalProblem;
+import testbed.abstractClass.HeirarchalProblem;
 
 /**
  *
