@@ -29,6 +29,15 @@ public abstract class requirement implements ISatisfy, IGoal{
     }
     
     /**
+     * can't aggregate a leaf
+     * @throws UnsupportedOperationException
+     */
+    @Override
+    public BiFunction<IGoal, IGoal, ISatisfy> aggregation(IGoal a, IGoal b) {
+        throw new UnsupportedOperationException("Can't aggregate Has Capability Goals as of yet. Need collection.");
+    }
+    
+    /**
      * applies the function onEach to this requirement.
      * This is a LEAF so there is no use of the aggregate function.
      * @param onEach

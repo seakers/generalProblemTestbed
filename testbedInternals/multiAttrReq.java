@@ -13,7 +13,7 @@ import testbed.*;
  *
  * @author nkner_000
  */
-public abstract class multiAttrReq extends requirement{
+public abstract class multiAttrReq extends absTree implements IGoal{
     Map<IPerf,PerfLevel> threshMap;
     String name;
     String discription;
