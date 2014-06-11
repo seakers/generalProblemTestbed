@@ -19,6 +19,17 @@ import testbed.abstractClass.Requirement;
 public class HasCapGoal extends Requirement{
     ICapable want;
     String name;
+
+    public HasCapGoal(ICapable want, String name) {
+        this.want = want;
+        this.name = name;
+    }
+
+    public HasCapGoal(ICapable want) {
+        this.want = want;
+        name=want.getName();
+    }
+    
     
     /**
      * satisfy our goal iff the desired capability is in the collection of capabilities c
@@ -37,7 +48,7 @@ public class HasCapGoal extends Requirement{
     }
 
     @Override
-    public TreeSet<Interval> domain() {
+    public RealSet domain() {
         return BooleanSatisfy.staticDomain();
     }
 

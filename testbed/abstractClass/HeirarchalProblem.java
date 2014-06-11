@@ -12,9 +12,31 @@ import java.util.*;
  *
  * @author nkner_000
  */
-public abstract class HeirarchalProblem implements IValFunc {
+public class HeirarchalProblem implements IValFunc {
     ICapableGen capGen;
     IGoal rootGoal;
+
+    public HeirarchalProblem(ICapableGen capGen, IGoal rootGoal) {
+        this.capGen = capGen;
+        this.rootGoal = rootGoal;
+    }
+
+    public ICapableGen getCapGen() {
+        return capGen;
+    }
+
+    public void setCapGen(ICapableGen capGen) {
+        this.capGen = capGen;
+    }
+
+    public IGoal getRootGoal() {
+        return rootGoal;
+    }
+
+    public void setRootGoal(IGoal rootGoal) {
+        this.rootGoal = rootGoal;
+    }
+
     /**
      * Here we break the problem into several pieces:
      * One is the mapping of elements to capabilities \/

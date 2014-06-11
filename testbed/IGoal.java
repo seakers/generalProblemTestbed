@@ -12,6 +12,6 @@ import java.util.function.*;
  */
 public interface IGoal extends ITree{
     public ISatisfy isSatisfy(Collection<ICapable> c);
-    public BiFunction<IGoal,IGoal,ISatisfy> aggregation(IGoal a, IGoal b);
+    public ISatisfy aggregation(IGoal a, IGoal b);
     public String getName();
 }

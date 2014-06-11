@@ -12,6 +12,7 @@ import java.util.function.*;
  */
 public interface ITree {
     public ITree[] getChildren();
+    public boolean setChild(ITree toReplace, ITree replacement);
     
     /**
      * 

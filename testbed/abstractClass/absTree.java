@@ -13,7 +13,7 @@ import testbed.ITree;
  *
  * @author nkner_000
  */
-public abstract class AbsTree implements ITree{
+public abstract class AbsTree implements ITree, Iterable{
     List<ITree> children;
 
     public AbsTree(List<ITree> children) {
@@ -55,5 +55,17 @@ public abstract class AbsTree implements ITree{
             public String apply(String s1, String s2){
                 return s1+s2;
             }
+        }
+        
+        /**
+         * returns an iterator to iterate through the children of this node
+         * @return 
+         */
+        @Override
+        public Iterator iterator(){
+        }
+        
+        public Iterator<ITree> iterateChild(){
+            return children.iterator();
         }
 }

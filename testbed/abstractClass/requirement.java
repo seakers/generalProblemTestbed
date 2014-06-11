@@ -33,7 +33,7 @@ public abstract class Requirement implements ISatisfy, IGoal{
      * @throws UnsupportedOperationException
      */
     @Override
-    public BiFunction<IGoal, IGoal, ISatisfy> aggregation(IGoal a, IGoal b) {
+    public ISatisfy aggregation(IGoal a, IGoal b) {
         throw new UnsupportedOperationException("Can't aggregate Has Capability Goals as of yet. Need collection.");
     }
     

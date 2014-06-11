@@ -5,10 +5,9 @@
  */
 
 package testbed.basicImplement;
-import java.util.TreeSet;
+import java.util.*;
 import testbed.*;
-import testbed.abstractClass.DiscInterval;
-import testbed.abstractClass.Interval;
+import testbed.abstractClass.*;
 /**
  *
  * @author nkner_000
@@ -36,13 +35,13 @@ public class BooleanSatisfy implements ISatisfy{
         return staticOptUtilArg();
     }
 
-    public static TreeSet<Interval> staticDomain() {
-        TreeSet<Interval> out;
-        out=new TreeSet<>();
-        out.add(new DiscInterval(0));
-        out.add(new DiscInterval(1));
+    public static RealSet staticDomain() {
+    //    TreeSet<Interval> out;
+    //    out=new TreeSet<>();
+    //    out.add(new DiscInterval(0));
+    //    out.add(new DiscInterval(1));
         
-        return out;
+        return new DiscInterval(Arrays.asList(new Double[]{0.0,1.0}));
     }
 
     public static double staticUtility(double satLvl) {

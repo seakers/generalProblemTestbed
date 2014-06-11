@@ -11,13 +11,14 @@ import java.util.*;
 /**
  *
  * @author nkner_000
+ * @param <T> some collection for the capabilities. This is a generic to insure some kind of consistency for the client
  */
 public class CapabilityMap<T extends Collection<ICapable>> implements ICapableGen{
     Map<IElement, T> capMap;
     private boolean lock;
     
     public CapabilityMap(){
-        capMap=new HashMap<IElement, T>();
+        capMap=new HashMap<>();
     }
 
     public CapabilityMap(Map<IElement, T> capMap) {
