@@ -13,9 +13,9 @@ import java.util.Iterator;
  *
  * @author nkner_000
  */
-public class mutInterval extends Interval implements Collection { //really should be set, but I'm lazy.
+public class MutInterval extends Interval implements Collection { //really should be set, but I'm lazy.
     
-    public mutInterval(double left, double right) {
+    public MutInterval(double left, double right) {
         super(left, right);
     }
 

@@ -7,13 +7,13 @@
 package EOSStest;
 import testbed.IArch;
 import java.util.*;
-import testbed.abstractClass.absTree;
+import testbed.abstractClass.AbsTree;
 
 /**
  *
  * @author nkner_000
  */
-public class EOSSarch extends absTree implements IArch{
+public class EOSSarch extends AbsTree implements IArch{
     public EOSSarch(String s){
         super(Arrays.asList(parseStr(s)));
     }

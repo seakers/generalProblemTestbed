@@ -4,9 +4,7 @@
  */
 
 package testbed;
-import java.util.*;
-import testbed.abstractClass.Interval;
-import testbed.abstractClass.RealOptima;
+import testbed.abstractClass.*;
 // import java.util.function.Function;
 
 /**
@@ -16,7 +14,7 @@ import testbed.abstractClass.RealOptima;
 //public interface ISatisfy extends Function<Collection<IPerf>, Double>{
 public interface ISatisfy {
     //public double apply (Collection<IPerf> c); //compute satisfaction level.
-    public TreeSet<Interval> domain(); //gives a set of intervals that describe a goal.
+    public RealSet domain(); //gives a set of intervals that describe a goal.
     public double utility(double satLvl); 
     public double optUtilArg(); //encodes more is better, less is better...
 }

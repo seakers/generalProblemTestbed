@@ -13,13 +13,13 @@ import testbed.ITree;
  *
  * @author nkner_000
  */
-public abstract class absTree implements ITree{
+public abstract class AbsTree implements ITree{
     List<ITree> children;
 
-    public absTree(List<ITree> children) {
+    public AbsTree(List<ITree> children) {
         this.children = children;
     }
-    public absTree() {
+    public AbsTree() {
         this.children=new ArrayList<>(0); //create empty to avoid null pointers.
     }
     
@@ -46,8 +46,8 @@ public abstract class absTree implements ITree{
     public String thisAndChildStr(){
         return (String) this.treeExec(new strExec(), new strConcat());
     }
-        protected static class strExec implements Function<absTree, String>{
-            public String apply(absTree a){
+        protected static class strExec implements Function<AbsTree, String>{
+            public String apply(AbsTree a){
                 return a.toString();
             }
         }

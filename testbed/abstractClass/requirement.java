@@ -18,7 +18,7 @@ import testbed.ITree;
  *
  * @author nkner_000
  */
-public abstract class requirement implements ISatisfy, IGoal{
+public abstract class Requirement implements ISatisfy, IGoal{
     
     /**
      * @return empty list. requirements are LEAVES!!!
@@ -38,7 +38,7 @@ public abstract class requirement implements ISatisfy, IGoal{
     }
     
     /**
-     * applies the function onEach to this requirement.
+     * applies the function onEach to this Requirement.
      * This is a LEAF so there is no use of the aggregate function.
      * @param onEach
      * @param aggregate

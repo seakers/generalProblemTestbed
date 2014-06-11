@@ -9,7 +9,7 @@ import java.util.*;
  *
  * @author nkner_000
  */
-public class Interval {
+public class Interval extends RealSet{
 
     private double minLim;
     private double maxLim;

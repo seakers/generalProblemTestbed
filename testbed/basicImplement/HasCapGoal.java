@@ -10,13 +10,13 @@ import java.util.Collection;
 import java.util.TreeSet;
 import testbed.*;
 import testbed.abstractClass.Interval;
-import testbed.abstractClass.requirement;
+import testbed.abstractClass.Requirement;
 
 /**
  *
  * @author nkner_000
  */
-public class HasCapGoal extends requirement{
+public class HasCapGoal extends Requirement{
     ICapable want;
     String name;
     

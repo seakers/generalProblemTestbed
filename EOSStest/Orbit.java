@@ -5,13 +5,13 @@
 package EOSStest;
 import java.util.*;
 import testbed.IElement;
-import testbed.abstractClass.absTree;
+import testbed.abstractClass.AbsTree;
 
 /**
  *
  * @author nkner_000
  */
-public class Orbit extends absTree implements IElement{
+public class Orbit extends AbsTree implements IElement{
     boolean[] instruments;
     double inclination;
     double altitude;

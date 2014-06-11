@@ -8,13 +8,13 @@ package testbed.basicImplement;
 import java.util.*;
 import java.util.function.BiFunction;
 import testbed.*;
-import testbed.abstractClass.multiAttrReq;
+import testbed.abstractClass.MultiAttrReq;
 
 /**
  *
  * @author nkner_000
  */
-public class caseReq extends multiAttrReq{
+public class caseReq extends MultiAttrReq{
 
     @Override
     public BiFunction<IGoal, IGoal, ISatisfy> aggregation(IGoal a, IGoal b) {
