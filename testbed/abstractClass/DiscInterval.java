@@ -4,8 +4,7 @@
 
 package testbed.abstractClass;
 
-import java.util.Arrays;
-import java.util.*;
+import java.util.*;;
 
 /**
  *
@@ -61,9 +60,17 @@ public class DiscInterval extends Interval{
     }
     
     public double getMin(){
-        return minLim;
+        return super.getMinLim();
     }
     public double getMax(){
-        return maxLim;
+        return super.getMaxLim();
+    }
+    
+    public Iterator iterator(){
+        return elems.iterator();
+    }
+    
+    public Double[] toArray(){
+        return elems.toArray(new Double[0]);
     }
 }

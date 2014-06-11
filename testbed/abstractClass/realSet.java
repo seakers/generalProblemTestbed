@@ -10,8 +10,8 @@ import java.util.*;
  *
  * @author nkner_000
  */
-public class realSet implements Collection<Double>{
-    ArrayList<Interval> reals;
+public class realSet implements Collection{
+    ArrayList<Interval> intvls; //TODO: actually more efficient if keep an ordred set of numbers representing in/out of the set
     ArrayList<Double> refLow;
     ArrayList<Double> refHigh;
 
@@ -22,21 +22,21 @@ public class realSet implements Collection<Double>{
     @Override
     public int size() {
         int total=0;
-        for(Interval i : reals)
+        for(Interval i : intvls)
             total+=i.size();
         return total;
     }
     
     public double measure() {
         double total=0;
-        for(Interval i : reals)
+        for(Interval i : intvls)
             total+=i.measure();
         return total;
     }
 
     @Override
     public boolean isEmpty() {
-        for(Interval i : reals)
+        for(Interval i : intvls)
             if(! i.isEmpty())
                 return false;
         return true;
@@ -44,15 +44,46 @@ public class realSet implements Collection<Double>{
 
     @Override
     public boolean contains(Object o) {
-        for(Interval i : reals)
+        for(Interval i : intvls)
             if(i.contains(o))
                 return true;
         return false;
     }
 
-    @Override
-    public Iterator<Double> iterator() {
-        
+    public boolean add(Double e) {
+        if
+            return false;
+        if(null==e && this.contains(e))
+            return false;
+    }
+    public boolean add(Interval i){
+    }
+
+    public boolean remove(Double e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public boolean remove(Interval i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean containsAll(Collection c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean addAll(Collection c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean removeAll(Collection c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public boolean retainAll(Collection c) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void clear() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -61,12 +92,12 @@ public class realSet implements Collection<Double>{
     }
 
     @Override
-    public <T> T[] toArray(T[] a) {
+    public Object[] toArray(Object[] a) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean add(Double e) {
+    public boolean add(Object e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -74,30 +105,9 @@ public class realSet implements Collection<Double>{
     public boolean remove(Object o) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends Double> c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void clear() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    @Override
+    public Iterator<Double> iterator() {
+        
+    }
 }

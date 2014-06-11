@@ -17,17 +17,17 @@ import testbed.abstractClass.multiAttrReq;
 public class caseReq extends multiAttrReq{
 
     @Override
-    protected ISatisfy satLvlMulti(Collection<IPerf> c) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public BiFunction<IGoal, IGoal, ISatisfy> aggregation(IGoal a, IGoal b) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    protected double satLvlMulti(Collection<IPerf> c) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

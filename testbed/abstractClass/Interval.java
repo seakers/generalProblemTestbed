@@ -10,8 +10,11 @@ import java.util.*;
  * @author nkner_000
  */
 public class Interval {
-    double minLim;
-    double maxLim;
+
+    private double minLim;
+    private double maxLim;
+    private boolean minInc;
+    private boolean maxInc;
     
     public Interval(double left, double right) {
         this.minLim = left;
@@ -53,5 +56,37 @@ public class Interval {
     
     public boolean fullyBound(){
         return isLeftBound() && isRightBound();
+    }
+
+    public double getMinLim() {
+        return minLim;
+    }
+
+    public void setMinLim(double minLim) {
+        this.minLim = minLim;
+    }
+
+    public double getMaxLim() {
+        return maxLim;
+    }
+
+    public void setMaxLim(double maxLim) {
+        this.maxLim = maxLim;
+    }
+
+    public boolean isMinInc() {
+        return minInc;
+    }
+
+    public void setMinInc(boolean minInc) {
+        this.minInc = minInc;
+    }
+
+    public boolean isMaxInc() {
+        return maxInc;
+    }
+
+    public void setMaxInc(boolean maxInc) {
+        this.maxInc = maxInc;
     }
 }
